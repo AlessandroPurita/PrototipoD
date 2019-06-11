@@ -7,7 +7,7 @@ public class TriggerLibro : MonoBehaviour
     // Start is called before the first frame update
     public GameObject pannello2;
     public GameObject testo2;
-    public GameObject porta;
+    public GameObject trig;
     bool t;
     public bool l=false;
     void Start()
@@ -16,7 +16,7 @@ public class TriggerLibro : MonoBehaviour
         pannello2.gameObject.SetActive(false);
         testo2 = GameObject.Find("Text2");
        testo2.gameObject.SetActive(false);
-        porta = GameObject.Find("porta");
+        trig = GameObject.Find("Trig");
        
         
     }
@@ -24,12 +24,13 @@ public class TriggerLibro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        t = porta.GetComponent<TriggerPorta>().trigger;
+      
         
     }
     
     private void OnTriggerStay2D(Collider2D collision)
     {
+        t = trig.GetComponent<TriggerPorta>().trigger;
         if (t == true)
         {
             pannello2.gameObject.SetActive(true);

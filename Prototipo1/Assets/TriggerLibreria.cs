@@ -44,7 +44,7 @@ public class TriggerLibreria : MonoBehaviour
         pannello3.gameObject.SetActive(false);
         testo3.gameObject.SetActive(false);
         Destroy(GameObject.Find("porta").GetComponent<CircleCollider2D>());
-        Destroy(GameObject.Find("block").GetComponent<CircleCollider2D>());
+        Destroy(GameObject.Find("Trig").GetComponent<CircleCollider2D>());
 
         //----
     }
