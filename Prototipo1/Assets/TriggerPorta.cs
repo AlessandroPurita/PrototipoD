@@ -7,6 +7,7 @@ public class TriggerPorta : MonoBehaviour
     // Start is called before the first frame update
     public GameObject pannello;
     public GameObject testo;
+    public bool trigger=false;
     void Start()
     {
         pannello = GameObject.Find("Panel");
@@ -29,5 +30,7 @@ public class TriggerPorta : MonoBehaviour
     {
         pannello.gameObject.SetActive(false);
         testo.gameObject.SetActive(false);
+        trigger = true;
+        //----
     }
 }
